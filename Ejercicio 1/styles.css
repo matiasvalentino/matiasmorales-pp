@@ -1,0 +1,91 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general */
+body {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Contenedores */
+.configuracion,
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 320px;
+}
+
+/* Ocultar el segundo div al inicio */
+.container {
+  display: none;
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin: 15px 0 8px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  background: #3b3b57;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6c63ff, #4a47d1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7d75ff, #5a57e0);
+}
+
+/* Números que aparecen */
+#num {
+  font-size: 28px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: #00ffcc;
+}
+
+/* Input resultado */
+#resultado {
+  font-size: 18px;
+}

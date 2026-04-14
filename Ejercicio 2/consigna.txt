@@ -1,0 +1,67 @@
+## 🚀 Ejercicio: Conversor de Pesos a Dólares en Tiempo Real
+
+### 🎯 Objetivo
+Desarrollar una aplicación web utilizando **HTML + CSS + JavaScript (vainilla)** que consuma una API pública para obtener cotizaciones del dólar en Argentina y permita convertir un monto en pesos a dólares según distintos tipos de cambio.
+
+---
+
+### 📋 Requisitos funcionales
+
+1.  **Ingreso de datos**
+    * El usuario debe ingresar un monto en **pesos argentinos (ARS)**.
+    * Debe haber un botón para realizar el cálculo.
+
+2.  **Consulta a API**
+    * La aplicación debe consumir una API pública que devuelva las cotizaciones de:
+        * Dólar **Oficial**
+        * Dólar **Blue**
+        * Dólar **MEP**
+    * Para cada tipo, obtener:
+        * Valor de **compra**
+        * Valor de **venta**
+
+3.  **Cálculo**
+    * A partir del monto ingresado:
+        * Calcular cuántos dólares se obtienen usando el valor de **compra**.
+        * Calcular cuántos dólares se obtienen usando el valor de **venta**.
+
+    > **👉 Fórmula:**
+    > $dólares = pesos / cotización$
+
+4.  **Visualización**
+    * Mostrar los resultados de forma clara, por ejemplo en una tabla:
+
+| Tipo de dólar | Compra | Venta | USD (Compra) | USD (Venta) |
+| :--- | :--- | :--- | :--- | :--- |
+| Oficial | \$xxx | \$xxx | xx.xx | xx.xx |
+| Blue | \$xxx | \$xxx | xx.xx | xx.xx |
+| MEP | \$xxx | \$xxx | xx.xx | xx.xx |
+
+---
+
+### 🧠 Requisitos de interfaz
+* Diseño prolijo y centrado en pantalla.
+* Uso de **CSS** (sin frameworks).
+* Diferenciar visualmente cada tipo de dólar (colores, cards, etc.).
+* Mostrar mensajes de error si:
+    * El input está vacío.
+    * El valor no es numérico.
+    * La API falla.
+
+---
+
+### ⚙️ Requisitos técnicos
+* Usar **`fetch()`** para consumir la API.
+* **No usar librerías externas** (ni Axios, ni frameworks).
+* Separar responsabilidades:
+    * **HTML** $\rightarrow$ estructura
+    * **CSS** $\rightarrow$ estilos
+    * **JS** $\rightarrow$ lógica + consumo API
+
+---
+
+### 🌐 API sugerida
+Pueden usar, por ejemplo:
+https://dolarapi.com/docs/argentina/
+
+*(pueden elegir otra si cumple los requisitos)*

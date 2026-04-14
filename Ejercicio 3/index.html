@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== PANTALLA INICIO ===== -->
+    <h1>pregunta<span>3</span></h1>
+    <button id="seleccionarCategoria" onclick="seleccionarCategoria()">
+        Elegir categoría
+    </button>
+
+    <!-- ===== PANTALLA CATEGORÍAS ===== -->
+    <div style="display:none" id="categorias">
+        <div>
+            <p>Seleccioná una categoría</p>
+            <div id="categoriaN"></div>
+        </div>
+        <button onclick="iniciarJuego()">Iniciar juego</button>
+    </div>
+
+    <!-- ===== PANTALLA JUEGO ===== -->
+    <div id="juego" style="display:none">
+
+        <!-- HUD -->
+        <div class="hud">
+            <div class="hud-item hud-puntaje">
+                <span class="hud-label">Puntaje</span>
+                <span class="hud-value" id="puntaje">0</span>
+            </div>
+            <div class="hud-item hud-pregunta">
+                <span class="hud-label">Pregunta</span>
+                <span class="hud-value"><span id="numeroDePregunta">1</span>/5</span>
+            </div>
+            <div class="hud-item hud-timer">
+                <span class="hud-label">Tiempo</span>
+                <span class="hud-value" id="tiempo">10</span>
+            </div>
+        </div>
+
+        <!-- Barra de progreso del timer -->
+        <div class="timer-bar-container">
+            <div class="timer-bar" id="timerBar"></div>
+        </div>
+
+        <!-- Card de pregunta + opciones -->
+        <div id="bloque1">
+            <p id="pregunta"></p>
+            <div id="opcion"></div>
+            <button id="btnConfirmar">Confirmar</button>
+        </div>
+
+    </div>
+
+    <!-- ===== PANTALLA RESULTADO ===== -->
+    <div id="resultado" style="display:none">
+        <p>¡Juego terminado!</p>
+        <p>Tu puntaje final es</p>
+        <span id="puntajeFinal"></span>
+        <p class="text-muted" style="font-size:0.85rem">de 5 preguntas</p>
+        <div class="result-stars" id="resultStars">⭐</div>
+        <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

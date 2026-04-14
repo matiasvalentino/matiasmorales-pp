@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="configuracion">
+        <h1>Suma rapido</h1>
+        <h3>Cantidad de numeros</h3>
+        <input type="number" id="cantidadDeNumeros">
+    
+
+        <h3>Intervalo de tiempo entre numero y numero</h3>
+        <input type="number" id="intervalo">
+
+        <button class="empezar" onclick="configuracion()">Empezar</button>
+    </div>
+    
+    <div class="container" id="numeros">
+        <p id="num"></p>
+
+        <br>
+        <h3>Ingrese el resultado</h3>
+        <input type="number" id="resultado">
+        <button onclick="verificar()">Verificar</button>
+    </div>
+
+
+
+    <script src="funciones.js"></script> 
+
+
+</body>
+</html>

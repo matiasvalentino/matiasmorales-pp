@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de pesos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Convertí tus pesos</h1>
+            </div>
+            <div class="badge">ARG / USD</div>
+        </header>
+
+        <main class="grid-content">
+            <div class="column">
+                <form class="panel form-panel" action="">
+                    <label for="pesos">Ingresá tus Pesos (ARS):</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="pesos" placeholder="0.00" step="0.01">
+                    </div>
+                    <button type="submit" class="primary-btn">Convertir a Dólares</button>
+                </form>
+
+                <div class="panel">
+                    <h3>Cotización en tiempo real</h3>
+                    <table id="tabla">
+                        <thead>
+                            <tr>
+                                <th>Tipo de dólar</th>
+                                <th>Compra</th>
+                                <th>Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="conversion" class="panel neon-panel" style="display: none;">
+                    <h3>Dashboard de Conversión</h3>
+                    <div class="badge-accent">
+                        <p>Pesos: $xxx</p>
+                    </div>
+                    <table> 
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Monto de Compra</th>
+                                <th>Monto de Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

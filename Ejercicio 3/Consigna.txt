@@ -1,0 +1,104 @@
+Prác ca: Trivia con API (simulada)
+Obje vo
+Desarrollar una aplicación web u lizando HTML, CSS y JavaScript (sin frameworks) que
+permita jugar a una trivia de preguntas y respuestas, consumiendo datos desde un
+archivo JSON local (simulando una API).
+Recursos provistos
+Se entrega un archivo:
+ trivia_240_preguntas.json
+Este archivo con ene:
+ 6 categorías
+ 40 preguntas por categoría
+Cada pregunta ene la siguiente estructura:
+{
+"id": "HIS_001",
+"pregunta": "Texto de la pregunta",
+"correcta": "Respuesta correcta",
+"incorrectas": ["Opción 1", "Opción 2", "Opción 3"],
+"nivel": "facil"
+}
+
+Requisitos funcionales
+1. Selección de categoría
+ Al iniciar la aplicación, el usuario debe poder seleccionar una categoría.
+ No se puede comenzar el juego sin seleccionar una categoría.
+
+2. Carga de datos
+ Las preguntas deben cargarse u lizando fetch() desde el archivo JSON local.
+ Si ocurre un error al cargar los datos:
+o Mostrar un mensaje en pantalla
+o No permi r con nuar
+
+3. Selección de preguntas
+ Una vez elegida la categoría:
+o Seleccionar 5 preguntas aleatorias
+o No deben repe rse
+
+4. Desarrollo del juego
+Para cada pregunta:
+ Mostrar:
+o Texto de la pregunta
+o 4 opciones (1 correcta + 3 incorrectas)
+ Las respuestas deben:
+o Estar mezcladas aleatoriamente
+o No mantener siempre la misma posición
+
+5. Tiempo por pregunta
+ Cada pregunta ene un máximo de 5 segundos
+ Debe mostrarse un contador visible en pantalla
+Comportamiento obligatorio:
+ Si el usuario responde antes:
+o Se evalúa la respuesta
+o Se pasa a la siguiente pregunta
+ Si el empo llega a 0:
+o La pregunta se considera no respondida
+o Se pasa automá camente a la siguiente
+
+6. Restricciones de interacción
+ Una vez seleccionada una respuesta:
+o No se puede cambiar
+o Se deben deshabilitar las demás opciones
+
+7. Resultado final
+Al finalizar las 5 preguntas, se debe mostrar:
+ Total de preguntas: 5
+ Can dad de respuestas:
+o ✔ Correctas
+o Incorrectas
+o ⏱ No respondidas
+
+Requisitos de interfaz
+ Interfaz clara y ordenada
+ Debe diferenciar visualmente:
+o Respuesta correcta
+o Respuesta incorrecta
+ Mostrar el progreso (ej: “Pregunta 2 de 5”)
+ Mostrar el empo restante en cada pregunta
+
+Requisitos técnicos
+ Usar únicamente:
+o HTML
+o CSS
+o JavaScript (vainilla)
+ No usar librerías externas
+ Uso obligatorio de:
+o fetch()
+o setTimeout() y/o setInterval()
+ Manipulación dinámica del DOM
+
+Restricciones
+ No hardcodear preguntas en el código
+ No repe r preguntas
+ No permi r múl ples respuestas por pregunta
+
+Puntos adicionales (no obligatorios)
+ Botón para reiniciar el juego
+ Animaciones (CSS)
+ Selección de dificultad (nivel)
+ Guardar puntaje en localStorage
+
+Resultado esperado
+Una aplicación funcional donde el usuario:
+1. Selecciona una categoría
+2. Responde 5 preguntas con límite de empo
+3. Visualiza su resultado final
